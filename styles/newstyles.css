@@ -255,3 +255,10 @@ a{
         width: 18rem;
     }
 }
+
+@media(orientation:portrait){
+    .text{
+        width:90vw;
+    }
+
+}
