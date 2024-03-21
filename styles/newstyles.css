@@ -258,7 +258,7 @@ a{
 
 @media(orientation:portrait){
     .text{
-        width:90vw;
+        width:20rem;
     }
 
 }
