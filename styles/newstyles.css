@@ -256,9 +256,4 @@ a{
     }
 }
 
-@media(orientation:portrait){
-    .text{
-        width:20rem;
-    }
 
-}
