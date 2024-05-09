@@ -172,7 +172,7 @@ function hideBodyAndRemoveText(){
             response ='Yabatech provides accommodation facilities for students. There are hostels on campus where students can reside.'
         }else if((request.includes('requirement') || request.includes('requirements'))){
             response = "requirements vary depending on the program. Generally, applicants need to have a minimum number of credits in relevant subjects at the O'level (SSCE or its equivalent). Specific entry requirements are usually outlined in the admission guidelines for each program."
-        }else if(request.includes('part') && request.includes('time') || request.includes('evening ')){
+        }else if(!request.includes('nysc') && !request.includes('jamb') && request.includes('part') && request.includes('time') || request.includes('evening ')){
             response = 'Yabatech offers part-time programs for individuals who may not be able to attend full-time classes. These programs are designed to accommodate working professionals and others with scheduling constraints.'
         }else if(request.includes('large') || request.includes('big') && request.includes('yabatech')){
             response ='The Yabatech campus is quite extensive, with various academic buildings, hostels, sports facilities, and administrative offices spread across the campus.'
@@ -242,13 +242,145 @@ function hideBodyAndRemoveText(){
             `
         }else if(request.includes('full') && request.includes('yabatech')){
             response = 'The full meaning of yabatech is Yaba college ig technology'
-        }else{
+        }else if(request.includes('places') && request.includes('yabatech')){
+            response = `Yaba College of Technology (Yabatech) is one of Nigeria's leading higher education institutions, offering a wide range of courses in various fields. Here are some important places within Yabatech along with their full meanings and brief descriptions:
+
+            1. School of Technology (SOT):
+               Full Meaning: The School of Technology houses departments related to engineering, technology, and applied sciences. This includes programs like Electrical Engineering, Civil Engineering, Computer Engineering, and more.
+            
+            2. School of Environmental Studies (SES):
+               Full Meaning: The School of Environmental Studies focuses on disciplines related to environmental science, architecture, urban and regional planning, and estate management.
+            
+            3. School of Management & Business Studies (SMBS):
+               Full Meaning: This school covers areas such as business administration, marketing, accountancy, banking and finance, and general management courses.
+            
+            4. School of Liberal Studies (SLS):
+               Full Meaning: The School of Liberal Studies includes courses in general education, social sciences, languages, and humanities.
+            
+            5. Central Administrative Building (CAB):
+               Description: The CAB is where administrative functions such as admissions, registration, and academic affairs are managed. It's also where students can access services like counseling and student affairs.
+            
+            6. Yabatech Library:
+               Description: The college library is a central hub for academic resources, research materials, and study spaces for students and faculty.
+            
+            7. Engineering Workshops:
+               Description: These workshops provide hands-on training and practical experience for students studying engineering-related disciplines.
+            
+            8. Yabatech Sports Complex:
+               Description: The sports complex includes facilities for various sports and recreational activities, promoting physical fitness and well-being among students.
+            
+            9. Yabatech Medical Centre:
+               Description: The medical center provides healthcare services to students and staff, including consultations, treatments, and medical emergencies.
+            
+            10. Student Hostels:
+                Description: Yabatech has on-campus hostels where students can reside during their academic tenure, providing a convenient living option close to academic facilities.
+            
+            These places collectively contribute to the holistic educational experience and campus life at Yaba College of Technology.`
+        }else if(request.includes('school of technology')){
+            response = 'The School of Technology houses departments related to engineering, technology, and applied sciences. This includes programs like Electrical Engineering, Civil Engineering, Computer Engineering, and more.'
+        }else if(request.includes('sot')){
+            response = 'The School of Technology houses departments related to engineering, technology, and applied sciences. This includes programs like Electrical Engineering, Civil Engineering, Computer Engineering, and more.'
+        }else if(request.includes('school of environmental studies')){
+            response =  'The School of Environmental Studies focuses on disciplines related to environmental science, architecture, urban and regional planning, and estate management.'
+        }else if(request.includes('ses')){
+            response =  'The School of Environmental Studies focuses on disciplines related to environmental science, architecture, urban and regional planning, and estate management.'
+        }else if(request.includes('school of management')){
+            response = 'This school covers areas such as business administration, marketing, accountancy, banking and finance, and general management courses.'
+        }else if(request.includes('smbs')){
+            response = 'This school covers areas such as business administration, marketing, accountancy, banking and finance, and general management courses.'
+        }else if(request.includes('school of liberal studies')){
+            response = 'The School of Liberal Studies includes courses in general education, social sciences, languages, and humanities.'
+        }else if(request.includes('sls')){
+            response = 'The School of Liberal Studies includes courses in general education, social sciences, languages, and humanities.'
+        }else if(request.includes('Central Administrative Building')){
+            response = `Description: The CAB is where administrative functions such as admissions, registration, and academic affairs are managed. It's also where students can access services like counseling and student affairs.`
+        }else if(request.includes('cab')){
+            response = `Description: The CAB is where administrative functions such as admissions, registration, and academic affairs are managed. It's also where students can access services like counseling and student affairs.`
+        }else if(request.includes('yabatech library')){
+            response = 'Description: The college library is a central hub for academic resources, research materials, and study spaces for students and faculty.'
+        }else if(request.includes('engineering workshops')){
+            response = 'Description: These workshops provide hands-on training and practical experience for students studying engineering-related disciplines.'
+        }else if(request.includes('sports complex')){
+            response = 'Description: The sports complex includes facilities for various sports and recreational activities, promoting physical fitness and well-being among students.'
+        }else if(request.includes('medical centre')){
+            response = 'Description: The medical center provides healthcare services to students and staff, including consultations, treatments, and medical emergencies.'
+        }else if(request.includes('hostels')){
+            response = 'Description: Yabatech has on-campus hostels where students can reside during their academic tenure, providing a convenient living option close to academic facilities.'
+        }else if (request.includes('mail') && request.includes('yabatech')){
+            response = 'Yabatech has an official email address where you can send complaints or inquiries: <a href ="mailto:info@yabatech.edu.ng">info@yabatech.edu.ng</a>'
+        }else if(request.includes('social media')){
+            response = `Yabatech is active on social media platforms, and you can connect with them for updates, announcements, and general inquiries:
+            <br> Facebook: <a target="_new" rel="noreferrer" href="https://www.facebook.com/yabatechofficial/">@yabatechofficial</a> <br>Twitter: <a target="_new" rel="noreferrer" href="https://twitter.com/Yabatechng">@Yabatechng</a> <br>Instagram: <a target="_new" rel="noreferrer" href="https://www.instagram.com/yabatech_ng/">@yabatech_ng</a>`
+        }else if(request.includes('nysc') && request.includes('part time') || request.includes('full time')){
+            response = 'While full-time students at Yabatech typically participate in the NYSC program after graduation, part-time students may also have opportunities to do so provided they meet the necessary criteria and requirements.'
+        }else if(request.includes('jamb') && request.includes('part time')){
+            response = 'No, you do not need to write the JAMB UTME exams to apply for the YABATECH part-time programme. '
+        }else if(request.includes('dressing') || request.includes('dressing code')){
+            response = `Yaba College of Technology (Yabatech) typically has a dress code policy that students are expected to adhere to while on campus. The dress code is usually designed to promote professionalism, decency, and a conducive learning environment. Here are some general guidelines that may apply to the dress code at Yabatech:
+
+            <b>Decent and Modest Attire:</b>
+            Students are generally expected to dress modestly and decently while on campus. This includes avoiding clothing that is too revealing, overly casual, or inappropriate for an educational setting.
+            No Offensive or Controversial Clothing:
+            Clothing with offensive language, symbols, or images is typically not allowed on campus. This includes clothing that promotes violence, discrimination, or any form of hate speech.
+            <b>Smart Casual or Business Casual:</b>
+            The dress code at Yabatech often leans towards smart casual or business casual attire. This may include collared shirts, blouses, slacks, skirts or dresses of appropriate length, and closed-toe shoes.
+            <b>Lab Attire:</b>
+            For students in technical or scientific programs that require lab work, there may be specific guidelines for lab attire. This could include wearing lab coats, safety goggles, and closed shoes for safety purposes.
+            Special Events or Occasions:
+            During special events, ceremonies, or academic functions, students may be required to dress more formally. This could involve wearing traditional attire, academic gowns, or specified dress codes for the occasion.
+            <b>Respect for Cultural Diversity:</b>
+            Yabatech is a diverse institution, and students are encouraged to respect and appreciate cultural diversity in their choice of clothing. Traditional attire representing different cultures is often welcomed and celebrated.
+            Personal Hygiene and Grooming:
+            Alongside clothing, students are expected to maintain good personal hygiene and grooming standards while on campus.
+            It's essential for students to familiarize themselves with the specific dress code policies outlined by Yabatech. These guidelines are usually communicated through student handbooks, notices, or official communications from the college authorities. Violation of the dress code may result in warnings, disciplinary actions, or restrictions from certain campus facilities or activities.`
+        }else if(request.includes('rules and regulations') ){
+            response = `Yaba College of Technology (Yabatech) has a set of rules and regulations that students are expected to adhere to. These rules are designed to maintain order, discipline, and a conducive learning environment on campus. While specific rules may vary, here are some common rules and regulations that may apply to students at Yabatech:
+
+            Academic Integrity:
+            Plagiarism and cheating in exams are strictly prohibited.
+            Students are expected to submit their own original work and give proper credit for sources used in their assignments.
+            Attendance and Punctuality:
+            Regular attendance in classes, lectures, and academic activities is required.
+            Students are expected to be punctual and arrive on time for classes and examinations.
+            Code of Conduct:
+            Respect for faculty, staff, and fellow students is mandatory.
+            Discriminatory behavior, harassment, bullying, and violence are not tolerated.
+            Students are expected to maintain courteous and respectful behavior in all interactions on campus.
+            Dress Code:
+            As mentioned earlier, students are expected to dress modestly, decently, and appropriately for an educational environment.
+            Use of Facilities:
+            Students are expected to use college facilities, equipment, and resources responsibly and for academic purposes only.
+            Vandalism, theft, or misuse of college property is strictly prohibited.
+            Alcohol and Substance Abuse:
+            Consumption of alcohol and illegal substances on campus is prohibited.
+            Students are expected to maintain a healthy and drug-free lifestyle while on campus.
+            Safety and Security:
+            Students must comply with safety guidelines and procedures, especially in laboratories, workshops, and other technical areas.
+            Respect for campus security protocols and emergency procedures is mandatory.
+            Library Rules:
+            Adherence to library rules and regulations, including borrowing and returning books on time, maintaining a quiet environment, and respecting library staff and fellow users.
+            Residential Rules (if applicable):
+            For students residing in college hostels, there are additional rules related to curfews, visitors, cleanliness, and communal living.
+            Disciplinary Actions:
+            Violation of rules may result in disciplinary actions, including warnings, fines, suspension, or expulsion, depending on the severity of the offense.
+            It's important for students to familiarize themselves with the specific rules and regulations outlined by Yabatech. These rules are usually communicated through student handbooks, notices, or official communications from the college authorities. Adherence to these rules contributes to a positive learning experience and a harmonious campus environment.`
+        }else if(request.includes('odfel') || request.includes('codfel')){
+            response = 'ODFEL stands for Open, Distance, Flexible And E-Learning <br> <a href = "https://www.yabatech.edu.ng/yabatechnews.php?id=357&shortcode=98YUIol2323&haid=026694662db5bdb5b66e1452d2cba092">Click here for more info</a>'
+        }else if(request.includes('motto') && request.includes('yabatech')){
+            response = 'Yabbatech motto is <b>Labor et Veritate</b>'
+        }else if(request.includes('radio station')){
+            response = 'Yabatech radio station is 89.3fm'   
+        }else if(request.includes('semester duration') || request.includes('semester') && request.includes('months')){
+            response = 'The duration of a semester in yabatech is 5 months for full time and 4 months for part time'
+        }
+         else{
             response ="Sorry i don't have an answer to this question, you would be redirected to yabatech's website in 3 seconds"
             setTimeout(function() {
                 window.location.href = 'https://www.yabatech.edu.ng'
             }, 3000)
         }
 
+       
         
         messageContainer.classList.add('new-margin')
         preSetMessage1.style.display = 'none'
