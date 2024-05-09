@@ -35,10 +35,7 @@ body{
     width:30rem;
     line-height: 35px;
     color: #f1f1f1; 
-}
-
-.text::placeholder{
-    padding-left: 10px;
+    text-indent: 15px;
 }
 
 .messagebox{
