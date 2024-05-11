@@ -372,6 +372,20 @@ function hideBodyAndRemoveText(){
             response = 'Yabatech radio station is 89.3fm'   
         }else if(request.includes('semester duration') || request.includes('semester') && request.includes('months')){
             response = 'The duration of a semester in yabatech is 5 months for full time and 4 months for part time'
+        }else if(request.includes('citm')){
+            response = 'CITM stands for Center for Information and Technology Management.'
+        }else if(request.includes('otm')){
+            response = 'OTM stands for Office Technology and Management.'
+        }else if(request.includes('nsb')){
+            response = 'NSB stands for New Sicence Building'
+        }else if(request.includes('envs')){
+            response = 'ENVS stands for environmental building'
+        }else if(request.includes('nb')){
+            response = 'NB stands for New Building.'
+        }else if(request.includes('ce')){
+            response = 'CE stands for Civil Engineering'
+        }else if(mp){
+            response = "MP stands for Multi-Purpose"
         }
          else{
             response ="Sorry i don't have an answer to this question, you would be redirected to yabatech's website in 3 seconds"
@@ -419,5 +433,6 @@ messageBox.addEventListener('keydown', function(event){
 })
 
 sendButton.addEventListener('click', hideBodyAndRemoveText);
+
 
 
