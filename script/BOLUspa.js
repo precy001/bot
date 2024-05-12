@@ -384,10 +384,9 @@ function hideBodyAndRemoveText(){
             response = 'NB stands for New Building.'
         }else if(request.includes('ce')){
             response = 'CE stands for Civil Engineering'
-        }else if(mp){
+        }else if(request.includes('mp')){
             response = "MP stands for Multi-Purpose"
-        }
-         else{
+        }else{
             response ="Sorry i don't have an answer to this question, you would be redirected to yabatech's website in 3 seconds"
             setTimeout(function() {
                 window.location.href = 'https://www.yabatech.edu.ng'
